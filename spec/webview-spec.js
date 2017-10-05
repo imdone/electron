@@ -9,8 +9,7 @@ const {closeWindow} = require('./window-helpers')
 const isCI = remote.getGlobal('isCi')
 const nativeModulesEnabled = remote.getGlobal('nativeModulesEnabled')
 
-// FIXME(alexeykuzmin): Crash on Mac.
-xdescribe('<webview> tag', function () {
+describe('<webview> tag', function () {
   this.timeout(3 * 60 * 1000)
 
   var fixtures = path.join(__dirname, 'fixtures')
