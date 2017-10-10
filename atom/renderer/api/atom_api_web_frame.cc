@@ -146,7 +146,7 @@ void WebFrame::SetSpellCheckProvider(mate::Arguments* args,
 }
 
 void WebFrame::RegisterURLSchemeAsSecure(const std::string& scheme) {
-  // TODO(pfrazee): Remove 2.0
+  // TODO (pfrazee): Remove 2.0 id:6 gh:7
   blink::SchemeRegistry::RegisterURLSchemeAsSecure(
       WTF::String::FromUTF8(scheme.data(), scheme.length()));
 }
@@ -179,7 +179,7 @@ void WebFrame::RegisterURLSchemeAsPrivileged(const std::string& scheme,
   WTF::String privileged_scheme(
       WTF::String::FromUTF8(scheme.data(), scheme.length()));
   if (secure) {
-    // TODO(pfrazee): Remove 2.0
+    // TODO (pfrazee): Remove 2.0 id:13 gh:14
     blink::SchemeRegistry::RegisterURLSchemeAsSecure(privileged_scheme);
   }
   if (bypassCSP) {
@@ -277,7 +277,7 @@ void WebFrame::BuildPrototype(
       .SetMethod("executeJavaScript", &WebFrame::ExecuteJavaScript)
       .SetMethod("getResourceUsage", &WebFrame::GetResourceUsage)
       .SetMethod("clearCache", &WebFrame::ClearCache)
-      // TODO(kevinsawicki): Remove in 2.0, deprecate before then with warnings
+      // TODO (kevinsawicki): Remove in 2.0, deprecate before then with warnings id:22 gh:23
       .SetMethod("setZoomLevelLimits", &WebFrame::SetVisualZoomLevelLimits);
 }
 

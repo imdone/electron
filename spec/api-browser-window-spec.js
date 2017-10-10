@@ -1147,7 +1147,7 @@ describe('BrowserWindow module', function () {
             ipcMain.once('answer', function (event, exceptionMessage) {
               assert(/Blocked a frame with origin/.test(exceptionMessage))
 
-              // FIXME this popup window should be closed in sandbox.html
+              // FIXME this popup window should be closed in sandbox.html id:48 gh:49
               closeWindow(popupWindow, {assertSingleWindow: false}).then(() => {
                 popupWindow = null
                 done()
@@ -1923,7 +1923,7 @@ describe('BrowserWindow module', function () {
     // This test is too slow, only test it on CI.
     if (!isCI) return
 
-    // FIXME These specs crash on Linux when run in a docker container
+    // FIXME These specs crash on Linux when run in a docker container id:109 gh:110
     if (isCI && process.platform === 'linux') return
 
     it('subscribes to frame updates', function (done) {

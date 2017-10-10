@@ -47,7 +47,7 @@ namespace {
 // headers used in PPB_Flash.Navigate() calls, in order to understand the impact
 // of rejecting PPB_Flash.Navigate() requests with non-simple headers.
 //
-// TODO(yzshen): We should be able to remove the histogram recording code once
+// TODO (yzshen): We should be able to remove the histogram recording code once id:82 gh:84
 // we get the answer.
 const char* const kRejectedHttpRequestHeaders[] = {
     "authorization",     //

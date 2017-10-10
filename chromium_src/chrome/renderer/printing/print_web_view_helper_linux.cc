@@ -70,7 +70,7 @@ bool PrintWebViewHelper::PrintPagesNative(blink::WebLocalFrame* frame,
       printed_pages.push_back(i);
     }
   } else {
-    // TODO(vitalybuka): redesign to make more code cross platform.
+    // TODO (vitalybuka): redesign to make more code cross platform. id:105 gh:106
     for (size_t i = 0; i < params.pages.size(); ++i) {
       if (params.pages[i] >= 0 && params.pages[i] < page_count) {
         printed_pages.push_back(params.pages[i]);

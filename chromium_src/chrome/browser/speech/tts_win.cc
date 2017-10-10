@@ -79,7 +79,7 @@ bool TtsPlatformImplWin::Speak(
   if (!speech_synthesizer_.get())
     return false;
 
-  // TODO(dmazzoni): support languages other than the default: crbug.com/88059
+  // TODO (dmazzoni): support languages other than the default: crbug.com/88059 id:63 gh:64
 
   if (params.rate >= 0.0) {
     // Map our multiplicative range of 0.1x to 10.0x onto Microsoft's
@@ -92,7 +92,7 @@ bool TtsPlatformImplWin::Speak(
 
   if (params.pitch >= 0.0) {
     // The TTS api allows a range of -10 to 10 for speech pitch.
-    // TODO(dtseng): cleanup if we ever use any other properties that
+    // TODO (dtseng): cleanup if we ever use any other properties that id:40 gh:41
     // require xml.
     std::wstring pitch_value =
         base::IntToString16(static_cast<int>(params.pitch * 10 - 10));
@@ -105,7 +105,7 @@ bool TtsPlatformImplWin::Speak(
     speech_synthesizer_->SetVolume(static_cast<uint16_t>(params.volume * 100));
   }
 
-  // TODO(dmazzoni): convert SSML to SAPI xml. http://crbug.com/88072
+  // TODO (dmazzoni): convert SSML to SAPI xml. http://crbug.com/88072 id:101 gh:102
 
   utterance_ = base::UTF8ToWide(src_utterance);
   utterance_id_ = utterance_id;
@@ -172,7 +172,7 @@ bool TtsPlatformImplWin::IsSpeaking() {
 
 void TtsPlatformImplWin::GetVoices(
     std::vector<VoiceData>* out_voices) {
-  // TODO: get all voices, not just default voice.
+  // TODO: get all voices, not just default voice. id:79 gh:80
   // http://crbug.com/88059
   out_voices->push_back(VoiceData());
   VoiceData& voice = out_voices->back();

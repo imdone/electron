@@ -90,7 +90,7 @@ def InstallDefaultSysrootForArch(target_arch):
 
 def InstallSysroot(target_platform, target_arch):
   # The sysroot directory should match the one specified in build/common.gypi.
-  # TODO(thestig) Consider putting this elsewhere to avoid having to recreate
+  # TODO (thestig) Consider putting this elsewhere to avoid having to recreate id:70 gh:71
   # it on every build.
   linux_dir = os.path.dirname(SCRIPT_DIR)
 

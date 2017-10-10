@@ -12,9 +12,9 @@
 namespace chrome {
 
 #if defined(OS_MACOSX)
-// NOTE: if you change the value of kFrameworkName, please don't forget to
+// NOTE: if you change the value of kFrameworkName, please don't forget to id:55 gh:52
 // update components/test/run_all_unittests.cc as well.
-// TODO(tfarina): Remove the comment above, when you fix components to use plist
+// TODO (tfarina): Remove the comment above, when you fix components to use plist id:65 gh:66
 // on Mac.
 extern const base::FilePath::CharType kFrameworkName[];
 #endif  // OS_MACOSX

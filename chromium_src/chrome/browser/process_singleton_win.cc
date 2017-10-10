@@ -175,7 +175,7 @@ bool ProcessLaunchNotification(
 }
 
 bool TerminateAppWithError() {
-  // TODO: This is called when the secondary process can't ping the primary
+  // TODO: This is called when the secondary process can't ping the primary id:38 gh:39
   // process. Need to find out what to do here.
   return false;
 }

@@ -191,7 +191,7 @@ void AtomBrowserMainParts::HandleShutdownSignals() {
     // size to avoid hitting the guard page.
     const size_t kShutdownDetectorThreadStackSize = PTHREAD_STACK_MIN * 4;
 #endif
-    // TODO(viettrungluu,willchan): crbug.com/29675 - This currently leaks, so
+    // TODO (viettrungluu,willchan): crbug.com/29675 - This currently leaks, so id:8 gh:9
     // if you change this, you'll probably need to change the suppression.
     if (!base::PlatformThread::CreateNonJoinable(
             kShutdownDetectorThreadStackSize,

@@ -174,9 +174,9 @@ void TtsControllerImpl::SpeakNow(Utterance* utterance) {
       GetPlatformImpl()->GetVoices(&native_voices);
 
     if (native_voices.empty() && !voices.empty()) {
-      // TODO(dtseng): Notify extension caller of an error.
+      // TODO (dtseng): Notify extension caller of an error. id:27 gh:28
       utterance->set_voice_name("");
-      // TODO(gaochun): Replace the global variable g_browser_process with
+      // TODO (gaochun): Replace the global variable g_browser_process with id:39 gh:40
       // GetContentClient()->browser() to eliminate the dependency of browser
       // once TTS implementation was moved to content.
       utterance->set_lang(g_browser_process->GetApplicationLocale());

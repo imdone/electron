@@ -927,7 +927,7 @@ void PrintWebViewHelper::PrintPages() {
   const PrintMsg_Print_Params& print_params = params.params;
 
 #if !defined(OS_CHROMEOS) && !defined(OS_ANDROID)
-  // TODO(vitalybuka): should be page_count or valid pages from params.pages.
+  // TODO (vitalybuka): should be page_count or valid pages from params.pages. id:67 gh:68
   // See http://crbug.com/161576
   Send(new PrintHostMsg_DidGetPrintedPagesCount(routing_id(),
                                                 print_params.document_cookie,

@@ -77,7 +77,7 @@ def main():
     # Press the publish button.
     publish_release(github, release['id'])
 
-    # TODO: run publish-to-npm script here
+    # TODO: run publish-to-npm script here id:108 gh:109
 
     # Do not upload other files when passed "-p".
     return
@@ -234,7 +234,7 @@ def upload_electron(github, release, file_path):
   upload_sha256_checksum(release['tag_name'], file_path)
 
   # Upload ARM assets without the v7l suffix for backwards compatibility
-  # TODO Remove for 2.0
+  # TODO Remove for 2.0 id:86 gh:88
   if 'armv7l' in filename:
     arm_filename = filename.replace('armv7l', 'arm')
     arm_file_path = os.path.join(os.path.dirname(file_path), arm_filename)

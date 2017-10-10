@@ -109,7 +109,7 @@ views::MenuItemView* MenuDelegate::GetSiblingMenu(
     views::MenuAnchorPosition* anchor,
     bool* has_mnemonics,
     views::MenuButton**) {
-  // TODO(zcbenz): We should follow Chromium's logics on implementing the
+  // TODO (zcbenz): We should follow Chromium's logics on implementing the id:3 gh:4
   // sibling menu switches, this code is almost a hack.
   views::MenuButton* button;
   AtomMenuModel* model;

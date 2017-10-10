@@ -68,11 +68,11 @@ void AtomBindings::BindTo(v8::Isolate* isolate,
 
   mate::Dictionary versions;
   if (dict.Get("versions", &versions)) {
-    // TODO(kevinsawicki): Make read-only in 2.0 to match node
+    // TODO (kevinsawicki): Make read-only in 2.0 to match node id:32 gh:33
     versions.Set(ATOM_PROJECT_NAME, ATOM_VERSION_STRING);
     versions.Set("chrome", CHROME_VERSION_STRING);
 
-    // TODO(kevinsawicki): Remove in 2.0
+    // TODO (kevinsawicki): Remove in 2.0 id:93 gh:94
     versions.Set("atom-shell", ATOM_VERSION_STRING);
   }
 }

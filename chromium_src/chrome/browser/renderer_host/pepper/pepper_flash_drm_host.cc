@@ -126,7 +126,7 @@ class MonitorFinder : public base::RefCountedThreadSafe<MonitorFinder> {
   volatile long request_sent_;
 };
 #elif !defined(OS_MACOSX)
-// TODO(cpu): Support Linux someday.
+// TODO (cpu): Support Linux someday. id:52 gh:54
 class MonitorFinder : public base::RefCountedThreadSafe<MonitorFinder> {
  public:
   MonitorFinder(int, int) {}

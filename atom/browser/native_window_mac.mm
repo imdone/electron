@@ -298,7 +298,7 @@ bool ScopedDisableResize::disable_resize_ = false;
 }
 
 - (void)windowDidMove:(NSNotification*)notification {
-  // TODO(zcbenz): Remove the alias after figuring out a proper
+  // TODO (zcbenz): Remove the alias after figuring out a proper id:17 gh:18
   // way to dispatch move.
   shell_->NotifyWindowMove();
   shell_->NotifyWindowMoved();
@@ -357,7 +357,7 @@ bool ScopedDisableResize::disable_resize_ = false;
   NSWindow* window = shell_->GetNativeWindow();
   if ((shell_->transparent() || !shell_->has_frame()) &&
       base::mac::IsAtLeastOS10_10() &&
-      // FIXME(zcbenz): Showing titlebar for hiddenInset window is weird under
+      // FIXME (zcbenz): Showing titlebar for hiddenInset window is weird under id:29 gh:30
       // fullscreen mode.
       // Show title if fullscreen_window_title flag is set
       (shell_->title_bar_style() != atom::NativeWindowMac::HIDDEN_INSET ||
@@ -810,7 +810,7 @@ struct Converter<atom::NativeWindowMac::TitleBarStyle> {
       return false;
     if (title_bar_style == "hidden") {
       *out = atom::NativeWindowMac::HIDDEN;
-    } else if (title_bar_style == "hidden-inset" ||  // TODO(kevinsawicki): Remove in 2.0, deprecate before then with warnings
+    } else if (title_bar_style == "hidden-inset" ||  // TODO (kevinsawicki): Remove in 2.0, deprecate before then with warnings id:90 gh:91
                title_bar_style == "hiddenInset") {
       *out = atom::NativeWindowMac::HIDDEN_INSET;
     } else if (title_bar_style == "customButtonsOnHover") {
@@ -1705,7 +1705,7 @@ void NativeWindowMac::SetVibrancy(const std::string& type) {
   }
 
   if (base::mac::IsAtLeastOS10_11()) {
-    // TODO(kevinsawicki): Use NSVisualEffectMaterial* constants directly once
+    // TODO (kevinsawicki): Use NSVisualEffectMaterial* constants directly once id:2 gh:3
     // they are available in the minimum SDK version
     if (type == "selection") {
       // NSVisualEffectMaterialSelection

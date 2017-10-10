@@ -312,7 +312,7 @@ WebContents::WebContents(v8::Isolate* isolate, const mate::Dictionary& options)
   // Read options.
   options.Get("backgroundThrottling", &background_throttling_);
 
-  // FIXME(zcbenz): We should read "type" parameter for better design, but
+  // FIXME (zcbenz): We should read "type" parameter for better design, but id:16 gh:17
   // on Windows we have encountered a compiler bug that if we read "type"
   // from |options| and then set |type_|, a memory corruption will happen
   // and Electron will soon crash.
@@ -1164,7 +1164,7 @@ void WebContents::OpenDevTools(mate::Arguments* args) {
     if (args->GetNext(&options)) {
       options.Get("mode", &state);
 
-      // TODO(kevinsawicki) Remove in 2.0
+      // TODO (kevinsawicki) Remove in 2.0 id:28 gh:29
       options.Get("detach", &detach);
       if (state.empty() && detach)
         state = "detach";
@@ -1520,7 +1520,7 @@ void WebContents::StartDrag(const mate::Dictionary& item,
 
   mate::Handle<NativeImage> icon;
   if (!item.Get("icon", &icon) && !file.empty()) {
-    // TODO(zcbenz): Set default icon from file.
+    // TODO (zcbenz): Set default icon from file. id:89 gh:90
   }
 
   // Error checking.

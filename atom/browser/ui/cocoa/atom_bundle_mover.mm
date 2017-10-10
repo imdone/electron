@@ -83,7 +83,7 @@ bool AtomBundleMover::Move(mate::Arguments* args) {
   }
 
   // Trash the original app. It's okay if this fails.
-  // NOTE: This final delete does not work if the source bundle is in a network mounted volume.
+  // NOTE: This final delete does not work if the source bundle is in a network mounted volume. id:30 gh:31
   //       Calling rm or file manager's delete method doesn't work either. It's unlikely to happen
   //       but it'd be great if someone could fix this.
   if (diskImageDevice == nil && !DeleteOrTrash(bundlePath)) {

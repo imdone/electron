@@ -168,7 +168,7 @@ gfx::Image Clipboard::ReadImage(mate::Arguments* args) {
 void Clipboard::WriteImage(const gfx::Image& image, mate::Arguments* args) {
   ui::ScopedClipboardWriter writer(GetClipboardType(args));
   SkBitmap bmp;
-  // TODO(ferreus): Replace with sk_tools_utils::copy_to (chrome60)
+  // TODO (ferreus): Replace with sk_tools_utils::copy_to (chrome60) id:92 gh:93
   if (image.AsBitmap().deepCopyTo(&bmp)) {
     writer.WriteImage(bmp);
   } else {
@@ -214,7 +214,7 @@ void Initialize(v8::Local<v8::Object> exports, v8::Local<v8::Value> unused,
   dict.SetMethod("writeBuffer", &atom::api::Clipboard::WriteBuffer);
   dict.SetMethod("clear", &atom::api::Clipboard::Clear);
 
-  // TODO(kevinsawicki): Remove in 2.0, deprecate before then with warnings
+  // TODO (kevinsawicki): Remove in 2.0, deprecate before then with warnings id:4 gh:5
   dict.SetMethod("readRtf", &atom::api::Clipboard::ReadRtf);
   dict.SetMethod("writeRtf", &atom::api::Clipboard::WriteRtf);
   dict.SetMethod("readHtml", &atom::api::Clipboard::ReadHtml);

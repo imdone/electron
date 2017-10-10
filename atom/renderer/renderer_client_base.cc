@@ -145,7 +145,7 @@ void RendererClientBase::RenderFrameCreated(
   new printing::PrintWebViewHelper(render_frame);
 
   // Allow file scheme to handle service worker by default.
-  // FIXME(zcbenz): Can this be moved elsewhere?
+  // FIXME (zcbenz): Can this be moved elsewhere? id:95 gh:96
   blink::WebSecurityPolicy::RegisterURLSchemeAsAllowingServiceWorkers("file");
 
   // This is required for widevine plugin detection provided during runtime.

@@ -18,7 +18,7 @@ class ColorChooserView;
 class Widget;
 }
 
-// TODO(mukai): rename this as -Ash and move to c/b/ui/ash after Linux-aura
+// TODO (mukai): rename this as -Ash and move to c/b/ui/ash after Linux-aura id:54 gh:56
 // switches to its native color chooser.
 class ColorChooserAura : public content::ColorChooser,
                          public views::ColorChooserListener {
