@@ -78,7 +78,7 @@ void MediaStreamDevicesController::Accept() {
         if (request_.audio_type == content::MEDIA_DEVICE_AUDIO_CAPTURE) {
           device = MediaCaptureDevicesDispatcher::GetInstance()->
               GetRequestedAudioDevice(request_.requested_audio_device_id);
-          // TODO(wjia): Confirm this is the intended behavior.
+          // TODO (wjia): Confirm this is the intended behavior. id:73 gh:74
           if (!device) {
             device = MediaCaptureDevicesDispatcher::GetInstance()->
                 GetFirstAvailableAudioDevice();
@@ -87,7 +87,7 @@ void MediaStreamDevicesController::Accept() {
           // Pepper API opens only one device at a time.
           device = MediaCaptureDevicesDispatcher::GetInstance()->
               GetRequestedVideoDevice(request_.requested_video_device_id);
-          // TODO(wjia): Confirm this is the intended behavior.
+          // TODO (wjia): Confirm this is the intended behavior. id:14 gh:15
           if (!device) {
             device = MediaCaptureDevicesDispatcher::GetInstance()->
                 GetFirstAvailableVideoDevice();

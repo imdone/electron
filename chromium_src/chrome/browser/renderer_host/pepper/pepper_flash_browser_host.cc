@@ -68,7 +68,7 @@ int32_t PepperFlashBrowserHost::OnUpdateActivity(
 #elif defined(OS_MACOSX)
 // UpdateSystemActivity(OverallAct);
 #else
-// TODO(brettw) implement this for other platforms.
+// TODO (brettw) implement this for other platforms. id:99 gh:100
 #endif
   return PP_OK;
 }

@@ -53,7 +53,7 @@ GlobalMenuBarRegistrarX11::GlobalMenuBarRegistrarX11()
       kAppMenuRegistrarName,
       kAppMenuRegistrarPath,
       kAppMenuRegistrarName,
-      nullptr,  // TODO: Probalby want a real cancelable.
+      nullptr,  // TODO: Probalby want a real cancelable. id:64 gh:65
       static_cast<GAsyncReadyCallback>(OnProxyCreatedThunk),
       this);
 }
@@ -73,7 +73,7 @@ void GlobalMenuBarRegistrarX11::RegisterXID(unsigned long xid) {
   std::string path = atom::GlobalMenuBarX11::GetPathForWindow(xid);
 
   ANNOTATE_SCOPED_MEMORY_LEAK; // http://crbug.com/314087
-  // TODO(erg): The mozilla implementation goes to a lot of callback trouble
+  // TODO (erg): The mozilla implementation goes to a lot of callback trouble id:41 gh:42
   // just to make sure that they react to make sure there's some sort of
   // cancelable object; including making a whole callback just to handle the
   // cancelable.
@@ -94,7 +94,7 @@ void GlobalMenuBarRegistrarX11::UnregisterXID(unsigned long xid) {
   std::string path = atom::GlobalMenuBarX11::GetPathForWindow(xid);
 
   ANNOTATE_SCOPED_MEMORY_LEAK; // http://crbug.com/314087
-  // TODO(erg): The mozilla implementation goes to a lot of callback trouble
+  // TODO (erg): The mozilla implementation goes to a lot of callback trouble id:102 gh:103
   // just to make sure that they react to make sure there's some sort of
   // cancelable object; including making a whole callback just to handle the
   // cancelable.
@@ -119,7 +119,7 @@ void GlobalMenuBarRegistrarX11::OnProxyCreated(GObject* source,
     return;
   }
 
-  // TODO(erg): Mozilla's implementation has a workaround for GDBus
+  // TODO (erg): Mozilla's implementation has a workaround for GDBus id:80 gh:81
   // cancellation here. However, it's marked as fixed. If there's weird
   // problems with cancelation, look at how they fixed their issues.
 

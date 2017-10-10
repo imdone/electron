@@ -15,7 +15,7 @@ PepperHelper::PepperHelper(content::RenderFrame* render_frame)
 PepperHelper::~PepperHelper() {}
 
 void PepperHelper::DidCreatePepperPlugin(content::RendererPpapiHost* host) {
-  // TODO(brettw) figure out how to hook up the host factory. It needs some
+  // TODO (brettw) figure out how to hook up the host factory. It needs some id:57 gh:58
   // kind of filter-like system to allow dynamic additions.
   host->GetPpapiHost()->AddHostFactoryFilter(
       std::unique_ptr<ppapi::host::HostFactory>(

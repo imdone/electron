@@ -305,7 +305,7 @@ NativeWindowViews::NativeWindowViews(
 #endif
 
   if (has_frame()) {
-    // TODO(zcbenz): This was used to force using native frame on Windows 2003,
+    // TODO (zcbenz): This was used to force using native frame on Windows 2003, id:9 gh:10
     // we should check whether setting it in InitParams can work.
     window_->set_frame_type(views::Widget::FrameType::FRAME_TYPE_FORCE_NATIVE);
     window_->FrameTypeChanged();

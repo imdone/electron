@@ -107,7 +107,7 @@ bool TtsPlatformImplMac::Speak(
     const std::string& lang,
     const VoiceData& voice,
     const UtteranceContinuousParameters& params) {
-  // TODO: convert SSML to SAPI xml. http://crbug.com/88072
+  // TODO: convert SSML to SAPI xml. http://crbug.com/88072 id:78 gh:79
   utterance_ = utterance;
   paused_ = false;
 
@@ -132,7 +132,7 @@ bool TtsPlatformImplMac::Speak(
 
   utterance_id_ = utterance_id;
 
-  // TODO: support languages other than the default: crbug.com/88059
+  // TODO: support languages other than the default: crbug.com/88059 id:53 gh:55
 
   if (params.rate >= 0.0) {
     // The TTS api defines rate via words per minute. Let 200 be the default.

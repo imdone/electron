@@ -330,7 +330,7 @@ void TtsPlatformImplLinux::IndexMarkCallback(size_t msg_id,
                                                       size_t client_id,
                                                       SPDNotificationType state,
                                                       char* index_mark) {
-  // TODO(dtseng): index_mark appears to specify an index type supplied by a
+  // TODO (dtseng): index_mark appears to specify an index type supplied by a id:100 gh:101
   // client. Need to explore how this is used before hooking it up with existing
   // word, sentence events.
   // We run Speech Dispatcher in threaded mode, so these callbacks should always

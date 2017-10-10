@@ -312,7 +312,7 @@ ScopedTempFile CreateTempPdfFile(
 bool LazyEmf::SafePlayback(HDC hdc) const {
   Emf emf;
   bool result = LoadEmf(&emf) && emf.SafePlayback(hdc);
-  // TODO(thestig): Fix destruction of metafiles. For some reasons
+  // TODO (thestig): Fix destruction of metafiles. For some reasons id:15 gh:16
   // instances of Emf are not deleted. https://crbug.com/260806
   // It's known that the Emf going to be played just once to a printer. So just
   // release |file_| here.
@@ -350,7 +350,7 @@ PostScriptMetaFile::~PostScriptMetaFile() {
 }
 
 bool PostScriptMetaFile::SafePlayback(HDC hdc) const {
-  // TODO(thestig): Fix destruction of metafiles. For some reasons
+  // TODO (thestig): Fix destruction of metafiles. For some reasons id:24 gh:25
   // instances of Emf are not deleted. https://crbug.com/260806
   // It's known that the Emf going to be played just once to a printer. So just
   // release |file_| before returning.
@@ -401,7 +401,7 @@ void PdfConverterUtilityProcessHostClient::Start(
   // Store callback before any OnFailed() call to make it called on failure.
   start_callback_ = start_callback;
 
-  // NOTE: This process _must_ be sandboxed, otherwise the pdf dll will load
+  // NOTE: This process _must_ be sandboxed, otherwise the pdf dll will load id:36 gh:37
   // gdiplus.dll, change how rendering happens, and not be able to correctly
   // generate when sent to a metafile DC.
   utility_process_host_ = content::UtilityProcessHost::Create(
@@ -532,7 +532,7 @@ void PdfConverterUtilityProcessHostClient::OnFailed() {
 void PdfConverterUtilityProcessHostClient::OnPreCacheFontCharacters(
     const LOGFONT& font,
     const base::string16& str) {
-  // TODO(scottmg): pdf/ppapi still require the renderer to be able to precache
+  // TODO (scottmg): pdf/ppapi still require the renderer to be able to precache id:97 gh:98
   // GDI fonts (http://crbug.com/383227), even when using DirectWrite.
   // Eventually this shouldn't be added and should be moved to
   // FontCacheDispatcher too. http://crbug.com/356346.

@@ -513,7 +513,7 @@ mate::Handle<NativeImage> NativeImage::CreateFromBuffer(
     options.Get("height", &height);
     options.Get("scaleFactor", &scale_factor);
   } else {
-    // TODO(kevinsawicki): Remove in 2.0, deprecate before then with warnings
+    // TODO (kevinsawicki): Remove in 2.0, deprecate before then with warnings id:11 gh:12
     args->GetNext(&scale_factor);
   }
 
@@ -560,7 +560,7 @@ void NativeImage::BuildPrototype(
       .SetMethod("crop", &NativeImage::Crop)
       .SetMethod("getAspectRatio", &NativeImage::GetAspectRatio)
       .SetMethod("addRepresentation", &NativeImage::AddRepresentation)
-      // TODO(kevinsawicki): Remove in 2.0, deprecate before then with warnings
+      // TODO (kevinsawicki): Remove in 2.0, deprecate before then with warnings id:20 gh:21
       .SetMethod("toPng", &NativeImage::ToPNG)
       .SetMethod("toJpeg", &NativeImage::ToJPEG);
 }

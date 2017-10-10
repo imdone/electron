@@ -3115,7 +3115,7 @@ struct kernel_statfs {
           LSS_BODY(6, type, name, arg1, arg2, arg3, arg4, arg5, arg6);        \
        }
     /* clone function adapted from glibc 2.3.6 clone.S                       */
-    /* TODO(csilvers): consider wrapping some args up in a struct, like we
+    /* TODO (csilvers): consider wrapping some args up in a struct, like we id:49 gh:50
      * do for i386's _syscall6, so we can compile successfully on gcc 2.95
      */
     LSS_INLINE int LSS_NAME(clone)(int (*fn)(void *), void *child_stack,
@@ -4100,7 +4100,7 @@ struct kernel_statfs {
       LSS_SC_BODY(3, ssize_t, 16, s, msg, flags);
     }
 
-    // TODO(csilvers): why is this ifdef'ed out?
+    // TODO (csilvers): why is this ifdef'ed out? id:110 gh:111
 #if 0
     LSS_INLINE ssize_t LSS_NAME(sendto)(int s, const void *buf, size_t len,
                                         int flags,
@@ -4219,7 +4219,7 @@ struct kernel_statfs {
     // The unlink syscall has been deprecated on aarch64. We polyfill it below.
     LSS_INLINE _syscall1(int,     pipe,           int *, p)
   #endif
-  /* TODO(csilvers): see if ppc can/should support this as well              */
+  /* TODO (csilvers): see if ppc can/should support this as well               id:88 gh:83*/
   #if defined(__i386__) || defined(__ARM_ARCH_3__) ||                         \
       defined(__ARM_EABI__) ||                                                \
      (defined(__mips__) && _MIPS_SIM != _MIPS_SIM_ABI64) ||                   \

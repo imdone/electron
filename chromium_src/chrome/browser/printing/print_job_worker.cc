@@ -230,7 +230,7 @@ void PrintJobWorker::GetSettings(bool ask_user_for_settings,
 
   // Recursive task processing is needed for the dialog in case it needs to be
   // destroyed by a task.
-  // TODO(thestig): This code is wrong. SetNestableTasksAllowed(true) is needed
+  // TODO (thestig): This code is wrong. SetNestableTasksAllowed(true) is needed id:50 gh:51
   // on the thread where the PrintDlgEx is called, and definitely both calls
   // should happen on the same thread. See http://crbug.com/73466
   // MessageLoop::current()->SetNestableTasksAllowed(true);
@@ -238,7 +238,7 @@ void PrintJobWorker::GetSettings(bool ask_user_for_settings,
   printing_context_->set_is_modifiable(is_modifiable);
 
   // When we delegate to a destination, we don't ask the user for settings.
-  // TODO(mad): Ask the destination for settings.
+  // TODO (mad): Ask the destination for settings. id:25 gh:26
   if (ask_user_for_settings) {
     BrowserThread::PostTask(
         BrowserThread::UI, FROM_HERE,
@@ -289,7 +289,7 @@ void PrintJobWorker::UpdatePrintSettings(
 void PrintJobWorker::GetSettingsDone(PrintingContext::Result result) {
   // Most PrintingContext functions may start a message loop and process
   // message recursively, so disable recursive task processing.
-  // TODO(thestig): See above comment. SetNestableTasksAllowed(false) needs to
+  // TODO (thestig): See above comment. SetNestableTasksAllowed(false) needs to id:37 gh:38
   // be called on the same thread as the previous call.  See
   // http://crbug.com/73466
   // MessageLoop::current()->SetNestableTasksAllowed(false);

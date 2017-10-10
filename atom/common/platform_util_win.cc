@@ -309,7 +309,7 @@ bool OpenExternal(const base::string16& url, bool activate) {
                                                 escaped_url.c_str(), NULL, NULL,
                                                 SW_SHOWNORMAL)) <= 32) {
     // We fail to execute the call. We could display a message to the user.
-    // TODO(nsylvain): we should also add a dialog to warn on errors. See
+    // TODO (nsylvain): we should also add a dialog to warn on errors. See id:33 gh:34
     // bug 1136923.
     return false;
   }
@@ -318,7 +318,7 @@ bool OpenExternal(const base::string16& url, bool activate) {
 
 void OpenExternal(const base::string16& url, bool activate,
                   const OpenExternalCallback& callback) {
-  // TODO(gabriel): Implement async open if callback is specified
+  // TODO (gabriel): Implement async open if callback is specified id:94 gh:95
   callback.Run(OpenExternal(url, activate) ? "" : "Failed to open");
 }
 

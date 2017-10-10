@@ -1211,7 +1211,7 @@ void App::BuildPrototype(
       .SetMethod("getAppMetrics", &App::GetAppMetrics)
       .SetMethod("getGPUFeatureStatus", &App::GetGPUFeatureStatus)
       .SetMethod("enableMixedSandbox", &App::EnableMixedSandbox)
-      // TODO(juturu): Remove in 2.0, deprecate before then with warnings
+      // TODO (juturu): Remove in 2.0, deprecate before then with warnings id:0 gh:1
       #if defined(OS_MACOSX)
       .SetMethod("moveToApplicationsFolder", &App::MoveToApplicationsFolder)
       .SetMethod("isInApplicationsFolder", &App::IsInApplicationsFolder)

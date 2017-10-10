@@ -67,7 +67,7 @@ bool XDGEmail(const std::string& email, const bool wait_for_exit) {
 
 namespace platform_util {
 
-// TODO(estade): It would be nice to be able to select the file in the file
+// TODO (estade): It would be nice to be able to select the file in the file id:12 gh:13
 // manager, but that probably requires extending xdg-open. For now just
 // show the folder.
 bool ShowItemInFolder(const base::FilePath& full_path) {
@@ -93,7 +93,7 @@ bool OpenExternal(const GURL& url, bool activate) {
 
 void OpenExternal(const GURL& url, bool activate,
                   const OpenExternalCallback& callback) {
-  // TODO(gabriel): Implement async open if callback is specified
+  // TODO (gabriel): Implement async open if callback is specified id:21 gh:22
   callback.Run(OpenExternal(url, activate) ? "" : "Failed to open");
 }
 

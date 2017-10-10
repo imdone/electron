@@ -226,7 +226,7 @@ void AtomBrowserClient::OverrideSiteInstanceForNavigation(
   *new_instance = site_instance.get();
 
   // Make sure the |site_instance| is not freed when this function returns.
-  // FIXME(zcbenz): We should adjust OverrideSiteInstanceForNavigation's
+  // FIXME (zcbenz): We should adjust OverrideSiteInstanceForNavigation's id:1 gh:2
   // interface to solve this.
   content::BrowserThread::PostTask(
       content::BrowserThread::UI, FROM_HERE,

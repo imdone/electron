@@ -43,7 +43,7 @@ def get_target_arch():
 def get_env_var(name):
   value = os.environ.get('ELECTRON_' + name, '')
   if not value:
-    # TODO Remove ATOM_SHELL_* fallback values
+    # TODO Remove ATOM_SHELL_* fallback values id:47 gh:48
     value = os.environ.get('ATOM_SHELL_' + name, '')
     if value:
       print 'Warning: Use $ELECTRON_' + name + ' instead of $ATOM_SHELL_' + name

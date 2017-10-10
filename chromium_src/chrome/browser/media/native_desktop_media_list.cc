@@ -58,7 +58,7 @@ gfx::ImageSkia ScaleDesktopFrame(std::unique_ptr<webrtc::DesktopFrame> frame,
                     libyuv::kFilterBilinear);
 
   // Set alpha channel values to 255 for all pixels.
-  // TODO(sergeyu): Fix screen/window capturers to capture alpha channel and
+  // TODO (sergeyu): Fix screen/window capturers to capture alpha channel and id:74 gh:75
   // remove this code. Currently screen/window capturers (at least some
   // implementations) only capture R, G and B channels and set Alpha to 0.
   // crbug.com/264424

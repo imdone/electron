@@ -114,7 +114,7 @@ void DesktopNotificationController::StartAnimation() {
     _ASSERT(hwnd_controller_);
 
     if (!is_animating_ && hwnd_controller_) {
-        // NOTE: 15ms is shorter than what we'd need for 60 fps, but since
+        // NOTE: 15ms is shorter than what we'd need for 60 fps, but since id:23 gh:24
         //       the timer is not accurate we must request a higher frame rate
         //       to get at least 60
 
@@ -163,7 +163,7 @@ void DesktopNotificationController::ClearAssets() {
 }
 
 void DesktopNotificationController::AnimateAll() {
-    // NOTE: This function refreshes position and size of all toasts according
+    // NOTE: This function refreshes position and size of all toasts according id:35 gh:36
     // to all current conditions. Animation time is only one of the variables
     // influencing them. Screen resolution is another.
 
@@ -311,7 +311,7 @@ void DesktopNotificationController::CreateToast(NotificationLink&& data) {
         instances_.push_back({ hwnd, move(data) });
 
         if (!hwnd_controller_) {
-            // NOTE: We cannot use a message-only window because we need to
+            // NOTE: We cannot use a message-only window because we need to id:96 gh:97
             //       receive system notifications
             hwnd_controller_ = CreateWindow(class_name_, nullptr, 0,
                                             0, 0, 0, 0,

@@ -71,7 +71,7 @@ class ProcessSingleton : public base::NonThreadSafe {
   // instance. Callers are guaranteed to either have notified an existing
   // process or have grabbed the singleton (unless the profile is locked by an
   // unreachable process).
-  // TODO(brettw): Make the implementation of this method non-platform-specific
+  // TODO (brettw): Make the implementation of this method non-platform-specific id:98 gh:99
   // by making Linux re-use the Windows implementation.
   NotifyResult NotifyOtherProcessOrCreate();
   void StartListeningOnSocket();
@@ -80,7 +80,7 @@ class ProcessSingleton : public base::NonThreadSafe {
   // Sets ourself up as the singleton instance.  Returns true on success.  If
   // false is returned, we are not the singleton instance and the caller must
   // exit.
-  // NOTE: Most callers should generally prefer NotifyOtherProcessOrCreate() to
+  // NOTE: Most callers should generally prefer NotifyOtherProcessOrCreate() to id:76 gh:77
   // this method, only callers for whom failure is preferred to notifying
   // another process should call this directly.
   bool Create();

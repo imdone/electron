@@ -41,7 +41,7 @@ ui::ClipboardType ConvertClipboardType(uint32_t type) {
 
 // Functions to pack/unpack custom data from a pickle. See the header file for
 // more detail on custom formats in Pepper.
-// TODO(raymes): Currently pepper custom formats are stored in their own
+// TODO (raymes): Currently pepper custom formats are stored in their own id:77 gh:78
 // native format type. However we should be able to store them in the same way
 // as "Web Custom" formats are. This would allow clipboard data to be shared
 // between pepper applications and web applications. However currently web apps

@@ -176,7 +176,7 @@ void PdfViewerHandler::GetStrings(const base::ListValue* args) {
   CHECK(args->Get(0, &callback_id));
 
   auto result = base::MakeUnique<base::DictionaryValue>();
-// TODO(deepak1556): Generate strings from components/pdf_strings.grdp.
+// TODO (deepak1556): Generate strings from components/pdf_strings.grdp. id:10 gh:11
 #define SET_STRING(id, resource) result->SetString(id, resource)
   SET_STRING("passwordPrompt",
              "This document is password protected.  Please enter a password.");

@@ -499,7 +499,7 @@ describe('app module', function () {
   })
 
   describe('getFileIcon() API', function () {
-    // FIXME Get these specs running on Linux CI
+    // FIXME Get these specs running on Linux CI id:61 gh:62
     if (process.platform === 'linux' && isCI) return
 
     const iconPath = path.join(__dirname, 'fixtures/assets/icon.ico')
@@ -597,7 +597,7 @@ describe('app module', function () {
   })
 
   describe('mixed sandbox option', function () {
-    // FIXME Get these specs running on Linux
+    // FIXME Get these specs running on Linux id:71 gh:72
     if (process.platform === 'linux') return
 
     let appProcess = null

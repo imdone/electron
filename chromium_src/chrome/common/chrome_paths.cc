@@ -283,7 +283,7 @@ bool PathProvider(int key, base::FilePath* result) {
       cur = cur.Append(chrome::kPepperFlashPluginFilename);
 #else
       // Chrome on iOS does not supports PPAPI binaries, return false.
-      // TODO(wfh): If Adobe release PPAPI binaries for Linux, add support here.
+      // TODO (wfh): If Adobe release PPAPI binaries for Linux, add support here. id:42 gh:43
       return false;
 #endif
       break;
@@ -316,7 +316,7 @@ bool PathProvider(int key, base::FilePath* result) {
         return false;
       cur = cur.Append(chrome::kPepperFlashPluginFilename);
       break;
-    // TODO(teravest): Remove this case once the internal NaCl plugin is gone.
+    // TODO (teravest): Remove this case once the internal NaCl plugin is gone. id:103 gh:104
     // We currently need a path here to look up whether the plugin is disabled
     // and what its permissions are.
     case chrome::FILE_NACL_PLUGIN:
@@ -368,7 +368,7 @@ bool PathProvider(int key, base::FilePath* result) {
       cur = cur.AppendASCII(kWidevineCdmBaseDirectory);
       break;
 #endif  // defined(WIDEVINE_CDM_IS_COMPONENT)
-    // TODO(xhwang): FILE_WIDEVINE_CDM_ADAPTER has different meanings.
+    // TODO (xhwang): FILE_WIDEVINE_CDM_ADAPTER has different meanings. id:81 gh:82
     // In the component case, this is the source adapter. Otherwise, it is the
     // actual Pepper module that gets loaded.
     case chrome::FILE_WIDEVINE_CDM_ADAPTER:
@@ -586,7 +586,7 @@ bool PathProvider(int key, base::FilePath* result) {
       return false;
   }
 
-  // TODO(bauerb): http://crbug.com/259796
+  // TODO (bauerb): http://crbug.com/259796 id:56 gh:57
   base::ThreadRestrictions::ScopedAllowIO allow_io;
   if (create_dir && !base::PathExists(cur) &&
       !base::CreateDirectory(cur))

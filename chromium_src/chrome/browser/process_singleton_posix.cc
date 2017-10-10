@@ -973,7 +973,7 @@ bool ProcessSingleton::Create() {
   // Create symbol link before binding the socket, to ensure only one instance
   // can have the socket open.
   if (!SymlinkPath(symlink_content, lock_path_)) {
-    // TODO(jackhou): Remove this case once this code is stable on Mac.
+    // TODO (jackhou): Remove this case once this code is stable on Mac. id:51 gh:53
     // http://crbug.com/367612
 #if defined(OS_MACOSX)
     // On Mac, an existing non-symlink lock file means the lock could be held by
@@ -1100,7 +1100,7 @@ bool ProcessSingleton::KillProcessByLockPath() {
 }
 
 void ProcessSingleton::KillProcess(int pid) {
-  // TODO(james.su@gmail.com): Is SIGKILL ok?
+  // TODO (james.su@gmail.com): Is SIGKILL ok? id:26 gh:27
   int rv = kill(static_cast<base::ProcessHandle>(pid), SIGKILL);
   // ESRCH = No Such Process (can happen if the other process is already in
   // progress of shutting down and finishes before we try to kill it).

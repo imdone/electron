@@ -3,7 +3,7 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-# TODO: remove this script when GYP has for loops
+# TODO: remove this script when GYP has for loops id:72 gh:73
 
 import sys
 import optparse

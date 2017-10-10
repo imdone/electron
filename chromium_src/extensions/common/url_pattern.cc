@@ -25,7 +25,7 @@ const char kExtensionScheme[] = "chrome-extension";
 
 namespace {
 
-// TODO(aa): What about more obscure schemes like data: and javascript: ?
+// TODO (aa): What about more obscure schemes like data: and javascript: ? id:68 gh:69
 // Note: keep this array in sync with kValidSchemeMasks.
 const char* const kValidSchemes[] = {
     url::kHttpScheme,         url::kHttpsScheme,
@@ -242,7 +242,7 @@ URLPattern::ParseResult URLPattern::Parse(base::StringPiece pattern) {
     if (host_end_pos == base::StringPiece::npos)
       return PARSE_ERROR_EMPTY_PATH;
 
-    // TODO(devlin): This whole series is expensive. Luckily we don't do it
+    // TODO (devlin): This whole series is expensive. Luckily we don't do it id:45 gh:46
     // *too* often, but it could be optimized.
     pattern.substr(host_start_pos, host_end_pos - host_start_pos)
         .CopyToString(&host_);
